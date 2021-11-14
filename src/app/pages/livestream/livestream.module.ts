@@ -7,8 +7,7 @@ import {livestreamPageComponent} from "./livestream.page";
 const routes: Routes = [
   {
     path: '',
-    component:livestreamPageComponent,
-    pathMatch: 'full'
+    component:livestreamPageComponent
   }
 ];
 
