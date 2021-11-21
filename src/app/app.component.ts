@@ -8,11 +8,12 @@ import { Router } from "@angular/router";
 })
 export class AppComponent {
   title = 'TextConvertor';
+  hide = false;
 
   constructor(private router: Router){
   }
 
-  switchPage():void {
-    this.router.navigate(['/livestream']);
+  hidePage():void {
+    this.hide = true;
   }
 }
