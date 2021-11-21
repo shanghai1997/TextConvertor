@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {AppComponent} from "./app.component";
+import { LivestreamPageComponent } from "./pages/livestream/livestream.page";
 
 const routes: Routes = [
+  {path: 'livestream', component: LivestreamPageComponent}
 ];
 
 @NgModule({
