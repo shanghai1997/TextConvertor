@@ -1,4 +1,4 @@
-import {Component, ElementRef, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-livestream',
@@ -6,5 +6,9 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
 })
 export class LivestreamPageComponent {
   title = 'TextConvertor';
-  @ViewChild('textArea') iframe: ElementRef
+  @ViewChild('textArea') iframe: ElementRef;
+
+  private addToIframe(){
+    this.iframe.nativeElement.contentWindow.frames.document.body.insertAdjacentHTML('beforebegin', 'fuck');
+  }
 }
