@@ -6,9 +6,12 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 })
 export class LivestreamPageComponent {
   title = 'TextConvertor';
-  @ViewChild('textArea') iframe: ElementRef;
+  @ViewChild('textArea', { static: true }) iframe: ElementRef;
 
-  private addToIframe(){
+  constructor() {
+  }
+
+  addToIframe(){
     this.iframe.nativeElement.contentWindow.frames.document.body.insertAdjacentHTML('beforebegin', 'fuck');
   }
 }
