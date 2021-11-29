@@ -12,7 +12,7 @@ export class LivestreamPageComponent {
   constructor() {
   }
 
-  addToIframe(){
-    this.iframe.nativeElement.contentWindow.frames.document.body.insertAdjacentHTML('beforebegin', 'fuck');
+  addToIframe(text: string){
+    this.iframe.nativeElement.contentWindow.frames.document.body.insertAdjacentHTML('beforebegin', text);
   }
 }
