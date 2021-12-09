@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "text-convertor-f7f74": {
+      "hosting": {
+        "TextConvertor": [
+          "text-convertor-f7f74"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "text-convertor-f7f74"
+  }
+}
