@@ -13,6 +13,6 @@ export class LivestreamPageComponent {
   }
 
   addToIframe(text: string){
-    this.iframe.nativeElement.contentWindow.frames.document.body.insertAdjacentHTML('beforebegin', text);
+    this.iframe.nativeElement.contentWindow.frames.document.body.insertAdjacentHTML('beforebegin', text+'\n');
   }
 }
