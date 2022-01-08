@@ -20,7 +20,8 @@ export class LivestreamPageComponent implements OnInit{
       .subscribe((i) => {
       console.log(i);
     })
-    this.iframe.nativeElement.style.visibility = "hidden";
+    console.log(this.iframe.nativeElement.style);
+    this.iframe.nativeElement.style.display = "none";
   }
 
   addToIframe(text: string){
@@ -30,7 +31,7 @@ export class LivestreamPageComponent implements OnInit{
   }
 
   revertVisibility() {
-    this.iframe.nativeElement.style.visibility !== "hidden" ?
-      this.iframe.nativeElement.style.visibility = "hidden" : this.iframe.nativeElement.style.visibility = "visible";
+    this.iframe.nativeElement.style.display !== "none" ?
+      this.iframe.nativeElement.style.display = "none" : this.iframe.nativeElement.style.display = "";
   }
 }
