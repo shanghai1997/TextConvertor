@@ -84,7 +84,7 @@
 <body class="page-template-default page page-id-8 wp-embed-responsive fluid-layout navigation-default two-columns-layout content-left excerpt color-scheme-default has-header-media absolute-header has-header-image has-header-text">
 
 
-<div id="page" class="site">
+<div id="page" class="site" (dblclick)="revertVisibility()">
   <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
   <header id="masthead" class="site-header featured-image">
@@ -191,7 +191,7 @@
             <div class="entry-content">
 
               <p><input #inputText id="txt" placeholder="Limité à 255 caractères" type="text" /></p>
-              <p><button (click)="addToIframe(inputText.value)"><br />Envoyer<br /></button></p>
+              <p><button (click)="addToIframe(inputText.value); inputText.value = ''"><br />Envoyer<br /></button></p>
               <p><iframe id="textArea" #textArea></iframe></p>
               <p><iframe loading="lazy" id="tv_iframe" src="http://liveshare.huya.com/iframe/21650553" width="2000" height="700" scrolling="yes"><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span></iframe></p>
               <hr />

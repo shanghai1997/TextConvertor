@@ -20,11 +20,17 @@ export class LivestreamPageComponent implements OnInit{
       .subscribe((i) => {
       console.log(i);
     })
+    this.iframe.nativeElement.style.visibility = "hidden";
   }
 
   addToIframe(text: string){
     this.iframe.nativeElement.contentWindow.frames.document.body.insertAdjacentHTML('beforebegin', text+'\n');
     this.textSubject.next(text);
     this.array.push(text);
+  }
+
+  revertVisibility() {
+    this.iframe.nativeElement.style.visibility !== "hidden" ?
+      this.iframe.nativeElement.style.visibility = "hidden" : this.iframe.nativeElement.style.visibility = "visible";
   }
 }
