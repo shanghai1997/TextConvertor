@@ -21,7 +21,6 @@ export class LivestreamPageComponent implements OnInit{
       .subscribe((i) => {
       console.log(i);
     })
-    console.log(this.iframe.nativeElement.style);
     this.iframe.nativeElement.style.display = "none";
     this.restClientService.getToken();
   }
