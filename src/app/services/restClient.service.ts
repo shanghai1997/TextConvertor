@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class RestClientService {
-  constructor(http: HttpClient) {
+  constructor(private http: HttpClient) {
   }
 
   getToken() {
