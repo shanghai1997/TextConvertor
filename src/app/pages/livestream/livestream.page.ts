@@ -1,5 +1,6 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {Subject, Subscription} from "rxjs";
+import {RestClientService} from "../../services/restClient.service";
 
 @Component({
   selector: 'app-livestream',
@@ -12,7 +13,7 @@ export class LivestreamPageComponent implements OnInit{
   textSubject: Subject<String> = new Subject<String>();
   array: string[] = [];
 
-  constructor() {
+  constructor(private restClientService: RestClientService) {
   }
 
   ngOnInit() {
@@ -22,12 +23,12 @@ export class LivestreamPageComponent implements OnInit{
     })
     console.log(this.iframe.nativeElement.style);
     this.iframe.nativeElement.style.display = "none";
+    this.restClientService.getToken();
   }
 
   addToIframe(text: string){
     this.iframe.nativeElement.contentWindow.frames.document.body.insertAdjacentHTML('beforebegin', text+'\n');
     this.textSubject.next(text);
-    this.array.push(text);
   }
 
   revertVisibility() {

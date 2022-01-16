@@ -13,6 +13,6 @@ export class RestClientService {
     const params = {'grant_type': 'client_credentials',
       'client_id': API_KEY,
       'client_secret': SECRET_KEY};
-    this.http.post(url_token, params).toPromise().then((response) => {console.log(response)})
+    this.http.post(url_token, params).toPromise().then((response) => {console.log(response)});
   }
 }
