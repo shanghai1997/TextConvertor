@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {Subject, Subscription} from "rxjs";
 import {RestClientService} from "../../services/restClient.service";
 
@@ -7,7 +7,7 @@ import {RestClientService} from "../../services/restClient.service";
   templateUrl: './livestream.page.html',
   styleUrls: ['./livestream.page.css']
 })
-export class LivestreamPageComponent implements OnInit{
+export class LivestreamPageComponent implements OnInit, AfterViewInit{
   title = 'TextConvertor';
   @ViewChild('textArea', { static: true }) iframe: ElementRef;
   textSubject: Subject<String> = new Subject<String>();
@@ -22,6 +22,9 @@ export class LivestreamPageComponent implements OnInit{
       console.log(i);
     })
     this.iframe.nativeElement.style.display = "none";
+  }
+
+  ngAfterViewInit() {
     this.restClientService.getToken();
   }
 
