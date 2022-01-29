@@ -7,7 +7,7 @@ import {RestClientService} from "../../services/restClient.service";
   templateUrl: './livestream.page.html',
   styleUrls: ['./livestream.page.css']
 })
-export class LivestreamPageComponent implements OnInit, AfterViewInit{
+export class LivestreamPageComponent implements OnInit{
   title = 'TextConvertor';
   @ViewChild('textArea', { static: true }) iframe: ElementRef;
   textSubject: Subject<String> = new Subject<String>();
