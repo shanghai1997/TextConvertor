@@ -19,7 +19,7 @@ export class LivestreamPageComponent implements OnInit{
   ngOnInit() {
     let sub: Subscription = this.textSubject
       .subscribe(async (i) => {
-      let token: any = await this.restClientService.getToken();
+      let token: string = await this.restClientService.getToken();
       if (token) {
         this.restClientService.getAudio(token);
       }

@@ -7,7 +7,7 @@ export class RestClientService {
   constructor() {
   }
 
-  async getToken() {
+  async getToken(): Promise<string> {
     const url_token = 'https://aip.baidubce.com/oauth/2.0/token'
     const API_KEY = '2YQSSYa41mSYbKl5eSQWuNU9';
     const SECRET_KEY = 'ZwCarB7ERSehFP7Kr6CM3erYD54NX3gR'
@@ -17,7 +17,7 @@ export class RestClientService {
 
     const config = {params: parameters}
 
-    await axios.post(url_token, null, config)
+    return await axios.post(url_token, null, config)
       .then(response => {
         console.log(response.data.access_token)
         return response.data.access_token;
