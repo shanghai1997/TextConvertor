@@ -1,10 +1,10 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import axios from "axios";
 
 @Injectable()
 export class RestClientService {
-  constructor(private http: HttpClient) {
+
+  constructor() {
   }
 
   async getToken() {
@@ -18,7 +18,14 @@ export class RestClientService {
     const config = {params: parameters}
 
     await axios.post(url_token, null, config)
-      .then(x => console.log(x))
-      .catch(x => console.log(x));
+      .then(response => {
+        console.log(response.data.access_token)
+        return response.data.access_token;
+      })
+      .catch(err => console.log(err));
+  };
+
+  getAudio(token: any) {
+    console.log(token)
   }
 }

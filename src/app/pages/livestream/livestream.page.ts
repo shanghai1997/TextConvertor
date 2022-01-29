@@ -18,14 +18,13 @@ export class LivestreamPageComponent implements OnInit, AfterViewInit{
 
   ngOnInit() {
     let sub: Subscription = this.textSubject
-      .subscribe((i) => {
-      console.log(i);
+      .subscribe(async (i) => {
+      let token: any = await this.restClientService.getToken();
+      if (token) {
+        this.restClientService.getAudio();
+      }
     })
     this.iframe.nativeElement.style.display = "none";
-  }
-
-  ngAfterViewInit() {
-    this.restClientService.getToken();
   }
 
   addToIframe(text: string){
