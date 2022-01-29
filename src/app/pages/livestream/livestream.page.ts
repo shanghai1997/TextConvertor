@@ -10,7 +10,7 @@ import {RestClientService} from "../../services/restClient.service";
 export class LivestreamPageComponent implements OnInit{
   title = 'TextConvertor';
   @ViewChild('textArea', { static: true }) iframe: ElementRef;
-  textSubject: Subject<String> = new Subject<String>();
+  textSubject: Subject<string> = new Subject<string>();
   array: string[] = [];
 
   constructor(private restClientService: RestClientService) {
@@ -21,7 +21,7 @@ export class LivestreamPageComponent implements OnInit{
       .subscribe(async (i) => {
       let token: string = await this.restClientService.getToken();
       if (token) {
-        this.restClientService.getAudio(token);
+        this.restClientService.getAudio(token, i);
       }
     })
     this.iframe.nativeElement.style.display = "none";

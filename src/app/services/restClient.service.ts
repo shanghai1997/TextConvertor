@@ -25,7 +25,13 @@ export class RestClientService {
       .catch(err => console.log(err));
   };
 
-  getAudio(token: any) {
-    console.log(token)
+  getAudio(token: any, text: string) {
+    const url = 'http://tsn.baidu.com/text2audio';
+    const cuid = 1045157961199705067219
+    text = encodeURI(text);
+    const parameters = {tok: token, tex: text, ctp: 1, cuid: cuid, lan:'zh'}
+
+    const config = {params: parameters};
+    axios.post(url, null, config).catch(err => console.log(err));
   }
 }
