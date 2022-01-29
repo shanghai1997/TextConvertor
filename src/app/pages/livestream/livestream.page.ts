@@ -21,7 +21,7 @@ export class LivestreamPageComponent implements OnInit{
       .subscribe(async (i) => {
       let token: any = await this.restClientService.getToken();
       if (token) {
-        this.restClientService.getAudio();
+        this.restClientService.getAudio(token);
       }
     })
     this.iframe.nativeElement.style.display = "none";
