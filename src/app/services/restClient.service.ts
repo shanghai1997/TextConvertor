@@ -31,7 +31,11 @@ export class RestClientService {
     text = encodeURI(text);
     const parameters = {tok: token, tex: text, ctp: 1, cuid: cuid, lan:'zh'}
 
-    const config = {params: parameters};
-    axios.post(url, null, config).catch(err => console.log(err));
+    axios({url: url, method: 'get', params: parameters, responseType: 'blob'}).then(response => {
+      const url = window.URL.createObjectURL(new Blob([response.data]))
+      console.log(url);
+      let audio = new Audio(url);
+      audio.play().catch(err => console.log(err));
+    }).catch(err => console.log(err));
   }
 }
