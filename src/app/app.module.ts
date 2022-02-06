@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from "./app-routing.module";
 import { HttpClientModule } from "@angular/common/http";
 import { LivestreamPageComponent } from "./pages/livestream/livestream.page";
-import {RestClientService} from "./services/restClient.service";
+import { RestClientService } from "./services/restClient.service";
 
 @NgModule({
   declarations: [
