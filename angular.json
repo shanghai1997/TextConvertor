@@ -98,16 +98,6 @@
             ],
             "scripts": []
           }
-        },
-        "deploy": {
-          "builder": "@angular/fire:deploy",
-          "options": {
-            "prerender": false,
-            "ssr": false,
-            "browserTarget": "TextConvertor:build:production",
-            "firebaseProject": "text-convertor-f7f74",
-            "firebaseHostingSite": "text-convertor-f7f74"
-          }
         }
       }
     }
