@@ -26,7 +26,7 @@ export class RestClientService {
   };
 
   getAudio(token: any, text: string) {
-    const url = 'http://tsn.baidu.com/text2audio';
+    const url = 'https://tsn.baidu.com/text2audio';
     const cuid = 1045157961199705067219
     text = encodeURI(text);
     const parameters = {tok: token, tex: text, ctp: 1, cuid: cuid, lan:'zh'}
