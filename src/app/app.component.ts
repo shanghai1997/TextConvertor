@@ -18,6 +18,6 @@ export class AppComponent {
   }
 
   headToLiveStream() {
-    this.router.navigate(['livestream'])
+    this.router.navigate(['livestream']).catch(() => {console.log('fail to navigate')})
   }
 }
