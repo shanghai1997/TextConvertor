@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LivestreamPageComponent } from "./pages/livestream/livestream.page";
 
 const routes: Routes = [
-  {path: 'livestream', component: LivestreamPageComponent}
+  { path: 'livestream', loadChildren: () => import('./pages/livestream/livestream.page.module').then(m => m.LivestreamPageModule) }
 ];
 
 @NgModule({

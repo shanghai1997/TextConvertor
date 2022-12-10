@@ -1,5 +1,4 @@
-<router-outlet></router-outlet>
-<div id="page" *ngIf="!hide" class="site">
+<div id="page" class="site">
   <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
   <header id="masthead" class="site-header featured-image">
@@ -28,8 +27,7 @@
               <nav id="site-navigation" class="main-navigation default-page-menu" role="navigation" aria-label="Primary Menu" aria-expanded="false">
                 <div class="primary-menu-container"><ul id="menu-primary-items" class="menu nav-menu">
                   <li class="page_item page-item-8">
-                    <a (click)="hidePage()" routerLink="/livestream" routerLinkActive="active">Parole liberté
-                    </a>
+                    <a (click)="hidePage()">Parole liberté </a>
                   </li>
                 </ul>
                 </div>
@@ -93,7 +91,7 @@
 
         <div class="scroll-down">
           <span>
-            <a (click)="hidePage()" routerLink="/livestream" routerLinkActive="active" id="clickHere">Click Here
+            <a (click)="headToLiveStream()" id="clickHere">Click Here
             </a>
           </span>
           <svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use> </svg>			</div><!-- .scroll-down -->

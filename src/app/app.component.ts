@@ -16,4 +16,8 @@ export class AppComponent {
   hidePage():void {
     this.hide = true;
   }
+
+  headToLiveStream() {
+    this.router.navigate(['livestream'])
+  }
 }
