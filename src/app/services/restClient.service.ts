@@ -17,12 +17,9 @@ export class RestClientService {
 
     const config = {params: parameters}
 
-    return await axios.post(url_token, null, config)
-      .then(response => {
-        console.log(response.data.access_token)
-        return response.data.access_token;
-      })
-      .catch(err => console.log(err));
+    const response = await axios.post(url_token, null, config)
+
+    return response.data.access_token
   };
 
   getAudio(token: any, text: string) {
