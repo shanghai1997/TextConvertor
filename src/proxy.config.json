@@ -1,0 +1,8 @@
+{
+  "/oauth": {
+    "target": "https://aip.baidubce.com",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}
