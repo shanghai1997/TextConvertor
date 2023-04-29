@@ -5,13 +5,17 @@ import { AppRoutingModule } from "./app-routing.module";
 import { HttpClientModule } from "@angular/common/http";
 import { LivestreamPageComponent } from "./pages/livestream/livestream.page";
 import { RestClientService } from "./services/restClient.service";
+import { FormsModule } from "@angular/forms";
+import { HomePage } from "./pages/home/home.page";
 
 @NgModule({
   declarations: [
     AppComponent,
-    LivestreamPageComponent
+    LivestreamPageComponent,
+    HomePage
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
