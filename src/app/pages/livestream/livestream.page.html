@@ -1,3 +1,4 @@
+<ion-content [scrollEvents]="true">
 <div id="page" class="site" (dblclick)="revertVisibility()">
   <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
@@ -105,7 +106,7 @@
             <div class="entry-content">
 
               <p><input #inputText id="txt" placeholder="Limité à 255 caractères" type="text" /></p>
-              <p><button (click)="addToIframe(inputText.value); inputText.value = ''"><br />Envoyer<br /></button></p>
+              <p class="confirmLine"><button id="confirmButton" (click)="addToIframe(inputText.value); inputText.value = ''">Envoyer</button></p>
               <p><iframe id="textArea" #textArea></iframe></p>
               <p><iframe loading="lazy" id="tv_iframe" src="http://liveshare.huya.com" width="2000" height="700" scrolling="yes"><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span><span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span></iframe></p>
               <hr />
@@ -409,4 +410,4 @@ l34.8,21.76c1.955,1.233,4.445,1.233,6.4,0l34.8-21.76l135.44,107.04V289.36z M358.
     </symbol>
   </defs>
 </svg>
-
+</ion-content>

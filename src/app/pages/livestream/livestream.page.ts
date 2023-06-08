@@ -5,7 +5,7 @@ import {RestClientService} from "../../services/restClient.service";
 @Component({
   selector: 'app-livestream',
   templateUrl: './livestream.page.html',
-  styleUrls: ['./livestream.page.css']
+  styleUrls: ['./livestream.page.scss']
 })
 export class LivestreamPageComponent implements OnInit{
   title = 'TextConvertor';
