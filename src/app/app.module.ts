@@ -7,6 +7,7 @@ import { LivestreamPageComponent } from "./pages/livestream/livestream.page";
 import { RestClientService } from "./services/restClient.service";
 import { FormsModule } from "@angular/forms";
 import { HomePage } from "./pages/home/home.page";
+import { IonicModule } from '@ionic/angular';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HomePage } from "./pages/home/home.page";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    IonicModule.forRoot(),
   ],
   providers: [
     RestClientService
