@@ -1,0 +1,13 @@
+.leftSideBar {
+  border-top: none;
+  background: black;
+  float: left;
+  height: 100%;
+  width: 20%;
+  max-width: 400px;
+  padding: 0 20px;
+
+  ion-item-group {
+    --background: transparent;
+  }
+}
