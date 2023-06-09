@@ -5,16 +5,19 @@
   border-top: none;
   float: left;
   height: 100%;
-  width: 12%;
+  width: 18%;
   background-color: black;
 
   .top-line {
+    margin-top: 5%;
     display: flex;
     justify-content: space-between;
     white-space: nowrap;
+    height: max-content;
 
     ion-button {
       font-size: 12px;
+      height: 45px;
       background-color: black;
       border-radius: 5px;
       --background: black;
@@ -60,12 +63,32 @@
   top: 0;
   right: 0;
   height: 100%;
-  width: 88%;
+  width: 82%;
   //background-color: #0d66c2;
   .chat-area {
+    height: 70%;
   }
   .input-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    ion-item {
+      width: 70%;
+      --border-color: grey;
+      --border-width: 2px;
+      --border-radius: 20px;
+      --highlight-height: 0px;
 
+      .button-disabled {
+        --color: #929397;
+      }
+
+      .has-focus {
+        --highlight-color-focused: grey;
+        --highlight-background: grey !important;
+      }
+    }
   }
 }
 

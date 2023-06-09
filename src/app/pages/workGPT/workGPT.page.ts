@@ -17,4 +17,8 @@ export class WorkGPTPage implements OnInit, OnDestroy {
 
   ngOnDestroy() {
   }
+
+  getUerInputText(text: any){
+    console.log(text)
+  }
 }
