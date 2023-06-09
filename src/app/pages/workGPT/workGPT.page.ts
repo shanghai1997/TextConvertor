@@ -7,6 +7,7 @@ import {Component, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class WorkGPTPage implements OnInit, OnDestroy {
+  textList: any[] = [];
 
   constructor(
   ) {
@@ -19,6 +20,6 @@ export class WorkGPTPage implements OnInit, OnDestroy {
   }
 
   getUerInputText(text: any){
-    console.log(text)
+    this.textList.push(text);
   }
 }

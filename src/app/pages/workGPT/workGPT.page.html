@@ -29,8 +29,12 @@
   </div>
   <div class="main-content">
     <ion-grid>
-      <ion-row class="chat-area">
-      </ion-row>
+      <div class="chat-area">
+        <ion-item *ngFor="let text of textList" color="medium">
+          <ion-icon name="aperture-outline"></ion-icon>
+          <ion-label>{{text}}</ion-label>
+        </ion-item>
+      </div>
       <ion-row class="input-area">
         <ion-item lines="none">
           <ion-input #userInput placeholder="Send a message."></ion-input>
