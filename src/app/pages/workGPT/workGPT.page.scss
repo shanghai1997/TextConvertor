@@ -1,13 +1,79 @@
 .leftSideBar {
+  position: absolute;
+  top: 0;
+  left: 0;
   border-top: none;
-  background: black;
   float: left;
   height: 100%;
-  width: 20%;
-  max-width: 400px;
-  padding: 0 20px;
+  width: 12%;
+  background-color: black;
+
+  .top-line {
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+
+    ion-button {
+      font-size: 12px;
+      background-color: black;
+      border-radius: 5px;
+      --background: black;
+      --color: white;
+      --border-color: blue;
+      --border-style: solid;
+      --border-width: 1px;
+    }
+
+    ion-button:nth-child(1) {
+      width: 70%;
+    }
+
+    ion-button:nth-child(2) {
+      width: 20%;
+      padding-right: 5px;
+    }
+
+  }
 
   ion-item-group {
-    --background: transparent;
+    ion-item-divider {
+      font-size: 10px;
+      --background: black;
+      --color: grey;
+    }
+    ion-item {
+      --color: white;
+      font-size: 12px;
+      ion-icon {
+        margin-right: 15px;
+      }
+      ion-label {
+
+      }
+    }
+  }
+}
+
+.main-content {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 88%;
+  //background-color: #0d66c2;
+  .chat-area {
+  }
+  .input-area {
+
+  }
+}
+
+@media(width < 700px) {
+  .leftSideBar {
+    display: none;
+  }
+  .main-content {
+    width: 100%;
   }
 }

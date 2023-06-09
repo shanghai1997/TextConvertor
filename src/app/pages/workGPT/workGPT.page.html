@@ -1,5 +1,13 @@
 <ion-content>
   <div class="leftSideBar">
+    <div class="top-line">
+      <ion-button fill="outline" size="small" color="dark">New Chat
+        <ion-icon slot="start" name="add"></ion-icon>
+      </ion-button>
+      <ion-button fill="outline" size="small" color="danger">
+        <ion-icon name="square-outline" size="large"></ion-icon>
+      </ion-button>
+    </div>
     <ion-item-group>
       <ion-item-divider>
         <ion-label>A</ion-label>
@@ -7,18 +15,24 @@
 
       <ion-item lines="none" color="dark">
         <ion-icon name="chatbox-outline" size="small" slot="start"></ion-icon>
-        <ion-label>Angola</ion-label>
+        <ion-label color="light">Angola</ion-label>
       </ion-item>
       <ion-item lines="none" color="dark">
         <ion-icon name="chatbox-outline" size="small" slot="start"></ion-icon>
-        <ion-label>Argentina</ion-label>
+        <ion-label color="light">Argentina</ion-label>
       </ion-item>
       <ion-item lines="none" color="dark">
         <ion-icon  name="chatbox-outline" size="small" slot="start"></ion-icon>
-        <ion-label>Armenia</ion-label>
+        <ion-label color="light">Armenia</ion-label>
       </ion-item>
     </ion-item-group>
   </div>
-  <div>
+  <div class="main-content">
+    <ion-grid>
+      <ion-row class="chat-area">
+      </ion-row>
+      <ion-row class="input-area">
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>

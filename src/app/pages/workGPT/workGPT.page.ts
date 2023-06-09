@@ -1,9 +1,10 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
 
 @Component({
-  selector: 'app-workGPT',
+  selector: 'app-work-gpt',
   templateUrl: './workGPT.page.html',
   styleUrls: ['./workGPT.page.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class WorkGPTPage implements OnInit, OnDestroy {
 
