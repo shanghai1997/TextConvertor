@@ -30,10 +30,15 @@
   <div class="main-content">
     <ion-grid>
       <div class="chat-area">
-        <ion-item *ngFor="let text of textList" color="medium">
-          <ion-icon name="aperture-outline"></ion-icon>
-          <ion-label>{{text}}</ion-label>
-        </ion-item>
+        <div *ngFor="let text of textList">
+          <ion-item color="medium">
+            <ion-icon name="aperture-outline"></ion-icon>
+            <ion-label>{{text}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-spinner></ion-spinner>
+          </ion-item>
+        </div>
       </div>
       <ion-row class="input-area">
         <ion-item lines="none">
