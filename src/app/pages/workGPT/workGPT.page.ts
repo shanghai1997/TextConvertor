@@ -1,4 +1,5 @@
 import {Component, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
+import {BehaviorSubject, map, timer} from "rxjs";
 
 @Component({
   selector: 'app-work-gpt',
@@ -21,5 +22,9 @@ export class WorkGPTPage implements OnInit, OnDestroy {
 
   getUerInputText(text: any){
     this.textList.push(text);
+  }
+
+  getLoadingObservable(){
+     return new BehaviorSubject(true).pipe(map(value => timer(3000)))
   }
 }
