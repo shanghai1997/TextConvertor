@@ -1,5 +1,5 @@
 import {Component, Input, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
-import {BehaviorSubject, interval, map, mergeMap, timer} from "rxjs";
+import {BehaviorSubject, interval, map, mergeMap, Observable, timer} from "rxjs";
 
 @Component({
   selector: 'app-chat-block',
@@ -9,22 +9,21 @@ import {BehaviorSubject, interval, map, mergeMap, timer} from "rxjs";
 })
 export class ChatBlockComponent implements OnInit, OnDestroy {
   @Input() text: string
-  loadingBehaviorSubj = new BehaviorSubject(true)
+  loadingBehaviorSubj: Observable<any>
+  isCodeDisplayed: boolean = false
+
 
   constructor(
   ) {
+    this.loadingBehaviorSubj = new Observable<any>((subscriber) => {
+      subscriber.next(true);
+      setTimeout(() => {subscriber.next(false); this.isCodeDisplayed = true;}, 2000)
+    })
   }
 
   ngOnInit() {
-    timer(3000).pipe(map(_ => this.loadingBehaviorSubj.next(false)))
   }
 
   ngOnDestroy() {
-  }
-
-  getLoadingObservable(){
-    const obs = new BehaviorSubject(true);
-    setTimeout(() => {obs.next(false)}, 3000);
-    return obs;
   }
 }

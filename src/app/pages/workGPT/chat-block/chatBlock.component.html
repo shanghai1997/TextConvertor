@@ -3,10 +3,10 @@
     <ion-icon name="aperture-outline"></ion-icon>
     <ion-label>{{text}}</ion-label>
   </ion-item>
-  <ion-item *ngIf="getLoadingObservable() | async">
+  <ion-item #loading *ngIf="loadingBehaviorSubj | async">
     <ion-spinner></ion-spinner>
   </ion-item>
-  <ion-card color="dark">
+  <ion-card *ngIf="isCodeDisplayed" color="dark">
     <ion-card-content>
       <ion-item lines="none">
         <ion-text>javascript</ion-text>
