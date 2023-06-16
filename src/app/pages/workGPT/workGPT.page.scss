@@ -71,24 +71,9 @@
     align-items: center;
     justify-content: start;
     height: 70%;
-    div {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    app-chat-block {
       width: 100%;
-      height: max-content;
-
-      ion-item {
-
-        ion-label {
-          text-align: start;
-          position: absolute;
-          left: 20%;
-          right: 20%
-        }
-      }
     }
-
   }
   .input-area {
     display: flex;

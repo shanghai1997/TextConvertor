@@ -30,35 +30,7 @@
   <div class="main-content">
     <ion-grid>
       <div class="chat-area">
-        <div *ngFor="let text of textList">
-          <ion-item color="medium">
-            <ion-icon name="aperture-outline"></ion-icon>
-            <ion-label>{{text}}</ion-label>
-          </ion-item>
-          <ion-item *ngIf="getLoadingObservable() | async">
-            <ion-spinner></ion-spinner>
-          </ion-item>
-          <pre>
-            <div class="bg-black rounded-md mb-4">
-              <div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md">
-                <span>javascript</span>
-                <button class="flex ml-auto gap-2">
-                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
-                  </svg>Copy code
-                </button>
-              </div>
-              <div class="p-4 overflow-y-auto">
-                <code class="!whitespace-pre hljs language-javascript">
-                  <span class="hljs-string">``</span>
-                  <span class="hljs-string">`javascript const bubbleSort = arr =&gt; arr.sort((a, b) =&gt; a - b);
-                  </span>
-                </code>
-              </div>
-            </div>
-          </pre>
-        </div>
+        <app-chat-block *ngFor="let text of textList" [text]="text"></app-chat-block>
       </div>
       <ion-row class="input-area">
         <ion-item lines="none">

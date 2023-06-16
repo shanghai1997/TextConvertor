@@ -3,10 +3,12 @@ import { IonicModule } from "@ionic/angular";
 import { WorkGPTPage } from "./workGPT.page";
 import { NgModule } from "@angular/core";
 import {CommonModule} from "@angular/common";
+import {ChatBlockComponent} from "./chat-block/chatBlock.component";
 
 @NgModule({
   declarations: [
-    WorkGPTPage
+    WorkGPTPage,
+    ChatBlockComponent
   ],
   imports: [
     IonicModule,
